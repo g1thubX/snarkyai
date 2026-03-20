@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Be+Vietnam+Pro:wght@300;400;500;700&family=Creepster&family=Permanent+Marker&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Space Grotesk", sans-serif;
+  --font-body: "Be Vietnam Pro", sans-serif;
+  
+  --color-background: #0e0e0e;
+  --color-surface: #0e0e0e;
+  --color-surface-low: #131313;
+  --color-surface-high: #20201f;
+  --color-surface-highest: #262626;
+  
+  --color-primary: #e08dff;
+  --color-secondary: #32ff00;
+  --color-tertiary: #ff6b9b;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: white;
+}
+
+h1, h2, h3, h4, h5, h6, .font-headline {
+  font-family: var(--font-headline);
+}
+
+/* Chaos-Chic Button Styles */
+.btn-chaos-primary {
+  background-color: var(--color-primary);
+  color: black;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.btn-chaos-primary:hover:not(:disabled) {
+  transform: translate(-4px, -4px);
+  box-shadow: 6px 6px 0px 0px var(--color-secondary);
+}
+
+.btn-chaos-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-chaos-secondary {
+  background-color: var(--color-secondary);
+  color: black;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  border: 3px solid #074600;
+}
+
+.btn-chaos-secondary:hover:not(:disabled) {
+  transform: translate(-4px, -4px);
+  box-shadow: 6px 6px 0px 0px var(--color-primary);
+}
+
+/* Sticker Shadows */
+.sticker-shadow-primary {
+  filter: drop-shadow(0 0 20px rgba(224, 141, 255, 0.15));
+}
+.sticker-shadow-secondary {
+  filter: drop-shadow(0 0 20px rgba(50, 255, 0, 0.15));
+}
+
+/* Meme Text Style */
+.meme-text {
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  line-height: 1.1;
+  /* Thick black outline */
+  text-shadow: 
+    -2px -2px 0 #000,  
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+    -3px  0   0 #000,
+     3px  0   0 #000,
+     0   -3px 0 #000,
+     0    3px 0 #000;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface-low);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-highest);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
